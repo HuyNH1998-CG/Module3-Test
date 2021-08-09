@@ -74,7 +74,7 @@
             <td>${product.category}</td>
             <td>
               <a href="/?action=edit&id=${product.id}"class="btn btn-primary">Edit</a>
-              <a href="/?action=delete&id=${product.id}"class="btn btn-danger">Delete</a>
+              <a href="/?action=delete&id=${product.id}"class="btn btn-danger" onclick="return confirm('Do you want to delete?')">Delete</a>
             </td>
           </tr>
         </c:forEach>
