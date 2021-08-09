@@ -1,0 +1,10 @@
+Connector/Connect.java
+ Connector.Connect
+Service/main.java
+ Service.main
+DAO/ProductDAO.java
+ DAO.ProductDAO
+Model/Category.java
+ Model.Category
+Model/Product.java
+ Model.Product
