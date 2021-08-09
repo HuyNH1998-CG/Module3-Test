@@ -42,6 +42,7 @@
             <tr>
                 <th>Category</th>
                 <td><select name="category">
+                    <option value="${product.catid}" selected hidden>${product.category}</option>
                     <c:forEach var="categories" items="${categories}">
                         <option value="${categories.id}">${categories.name}</option>
                     </c:forEach>

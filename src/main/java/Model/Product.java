@@ -7,6 +7,7 @@ public class Product {
     private int amount;
     private String colour;
     private String description;
+    private int catid;
     private String category;
 
     public Product(String name, int amount, String colour, String description, String category) {
@@ -34,6 +35,25 @@ public class Product {
         this.colour = colour;
         this.description = description;
         this.category = category;
+    }
+
+    public Product(int id, String name, float price, int amount, String colour, String description, int catid, String category) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.amount = amount;
+        this.colour = colour;
+        this.description = description;
+        this.catid = catid;
+        this.category = category;
+    }
+
+    public int getCatid() {
+        return catid;
+    }
+
+    public void setCatid(int catid) {
+        this.catid = catid;
     }
 
     public int getId() {

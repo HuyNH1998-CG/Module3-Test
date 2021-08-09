@@ -110,7 +110,7 @@ public class ProductDAO {
     public Product getProductById(int id) {
         Product list = null;
         try {
-            query = "select product.id, product.name, amount, color, description, price, c.name as category from product inner join category c on product.category = c.id where product.id=?";
+            query = "select product.id, product.name, amount, color, description, price, c.name as categoryname, product.category from product inner join category c on product.category = c.id where product.id=?";
             statement = connection.prepareStatement(query);
             statement.setInt(1,id);
             rs = statement.executeQuery();
@@ -120,8 +120,9 @@ public class ProductDAO {
                 String colour = rs.getString("color");
                 String description = rs.getString("description");
                 float price = rs.getFloat("price");
-                String category = rs.getString("category");
-                list = new Product(id, name, price, amount, colour, description, category);
+                String category = rs.getString("categoryname");
+                int categoryid = rs.getInt("category");
+                list = new Product(id, name, price, amount, colour, description,categoryid,category);
             }
         } catch (Exception e) {
             e.printStackTrace();
